@@ -10,7 +10,7 @@
     </resultMap>
 
     <select id="Sel" resultType="com.example.demo.bean.Person">
-        select * from person where id = #{id}
+        select * from user where id = #{id}
     </select>
 
 </mapper>

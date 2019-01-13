@@ -12,7 +12,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  */
 
 @MapperScan("com.example.demo.mapper") //扫描的mapper
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
