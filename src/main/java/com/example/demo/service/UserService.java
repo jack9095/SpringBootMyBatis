@@ -10,8 +10,21 @@ public class UserService {
 
     @Autowired
     UserMapper userMapper;
+
     public Person Sel(int id){
         return userMapper.Sel(id);
+    }
+
+    public int Del(int id){
+        return userMapper.Del(id);
+    }
+
+    public int Ins(Person person){
+        return userMapper.Ins(person);
+    }
+
+    public int upDate(Person person){
+        return userMapper.upDate(person);
     }
 
 }

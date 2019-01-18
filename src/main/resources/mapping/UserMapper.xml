@@ -9,8 +9,21 @@
         <result column="realName" jdbcType="VARCHAR" property="realName" />
     </resultMap>
 
-    <select id="Sel" resultType="com.example.demo.bean.Person">
-        select * from user where id = #{id}
+    <select id="Sel" parameterType="int" resultType="com.example.demo.bean.Person">
+        select * from person where id = #{id}
     </select>
+
+    <delete id="Del" parameterType="int">
+        delete from person where id = #{id}
+    </delete>
+
+    <insert id="Ins" parameterType="com.example.demo.bean.Person">
+        insert into person values(#{id},#{userName},#{passWord},#{realName})
+    </insert>
+
+    <update id="upDate" parameterType="com.example.demo.bean.Person">
+        update person set userName=#{userName} where id=#{id}
+    </update>
+
 
 </mapper>
